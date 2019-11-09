@@ -1,0 +1,38 @@
+<div 
+      class="ce-menu"
+      [class.ce-menu-open]="isOpen"
+      [class.ce-menu-top]="alignment === 'top'"
+      [class.ce-menu-bottom]="alignment === 'bottom'"
+      [class.ce-menu-right]="alignment === 'right'"
+      [class.ce-menu-left]="alignment === 'left'"
+      [style.transform]="offsetTransform">
+      <div class="ce-menu-mask" (click)='maskClick()' *ngIf="mask" [style.zIndex]="0" [ngStyle]="maskStyle"></div>
+      <div class="ce-menu-content-wrapper {{wrapClassName}}"
+          [style.zIndex]="zIndex"
+          [style.width]="width"
+          [style.height]="height"
+          [style.transform]="transform">
+          <div class="ce-menu-content">
+              <div class="ce-menu-wrapper-body"
+                  [style.overflow]="isLeftOrRight ? 'auto' : null"
+                  [style.height]="isLeftOrRight ? 'auto' : null">
+                  <div *ngIf="menuTitle" class="ce-menu-header">
+                      <div  class="ce-menu-title">
+                          <ng-container [ngSwitch]="true">
+                              <ng-container *ngSwitchCase="isTemplateRef(menuTitle)" [ngTemplateOutlet]="menuTitle"></ng-container>
+                              <ng-container *ngSwitchCase="isNonEmptyString(menuTitle)"><div [innerHTML]="menuTitle"></div></ng-container>
+                          </ng-container>
+                      </div>
+                  </div>
+                  <button *ngIf="menuClosable" (click)="closeClick()" aria-label="Close" class="ce-menu-close">X</button>
+                  <div class="ce-menu-body" [ngStyle]="bodyStyle">
+                      <ng-template cdkPortalOutlet></ng-template>
+                      <ng-container *ngIf="isTemplateRef(menuContent)">
+                        <ng-container *ngTemplateOutlet="menuContent"></ng-container>
+                      </ng-container>
+                      <ng-content *ngIf="!menuContent"></ng-content>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>

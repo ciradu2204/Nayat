@@ -1,0 +1,72 @@
+ <ng-template #modalDefaultContent> <ng-content></ng-content> </ng-template>
+ <div>
+    <div *ngIf="tranparentBg" 
+    class="ce-modal-background"
+    [ngClass]="maskAnimationClassMap"
+    [class.ce-modal-hidden]="hidden"
+    [ngStyle]="bgStyle"
+    [style.zIndex]="zIndex"></div>
+    <div 
+    (click)="onClickBg($event);"
+    class="ce-modal-wrap"
+    [style.zIndex]="zIndex"
+    [style.display]="hidden ? 'none':''"
+    tabindex="-1"
+    role="dialog"
+    >
+        <div #modalContainer
+        class="ce-modal"
+        [ngClass]="modalAnimationClassMap"
+        [ngStyle]="ceStyle"
+        [style.transform-origin]="transformOrgin"
+        role="document">
+            <div
+            class="ce-modal-content">
+                <button *ngIf="modalClosable"
+                (click)="closeModal()"
+                class="ce-modal-close"
+                aria-lable="close">
+                    <span class="ce-modal-close-x">
+                        <i class="material-icons">
+                            clear
+                        </i>
+                    </span>
+                </button>
+                <ng-container [ngTemplateOutlet]="modalContent"></ng-container>
+            </div>
+        </div>
+    </div>
+ </div>
+<ng-template #modalContent>
+    <div *ngIf="modalTitle" class="ce-modal-header">
+        <img src="../../../../assets/images/whizle_Final_logo.png" class="ce-modal-logo" alt="">
+        <div class="ce-modal-title">
+            <ng-container [ngSwitch]="true">
+                <ng-container *ngSwitchCase="isTemplateRef(modalTitle)" [ngTemplateOutlet]="modalTitle"></ng-container>
+                <ng-container *ngSwitchCase="isEmptyString(modalTitle)">
+                    <div [innerHTML]="modalTitle"></div>
+                </ng-container>
+            </ng-container>
+        </div>
+        <div class="ce-modal-body" [ngStyle]="contentStyle">
+            <ng-container #modalBody>
+                <ng-container *ngIf="!isComponent(modalText)" [ngSwitch]="true">
+                    <ng-container *ngSwitchCase="isTemplateRef(modalText)" [ngTemplateOutlet]="modalText"></ng-container>
+                    <ng-container *ngSwitchCase="isEmptyString(modalText)">
+                        <div [innerHTML]="modalText"></div>
+                    </ng-container>
+                    <ng-container *ngSwitchDefault [ngTemplateOutlet]="modalDefaultContent"></ng-container>
+                </ng-container>
+            </ng-container>
+        </div>
+        <div *ngIf="modalFooter" class="ce-modal-footer">
+            <ng-container [ngSwitch]="true">
+                <ng-container *ngSwitchCase="isTemplateRef(modalFooter)" [ngTemplateOutlet]="modalFooter"></ng-container>
+                <ng-container *ngSwitchCase="isEmptyString(modalFooter)">
+                    <div [innerHTML]="modalFooter"></div>
+                </ng-container>
+            </ng-container>
+        </div>
+
+    </div>
+</ng-template>

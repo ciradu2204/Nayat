@@ -1,0 +1,218 @@
+//ce-flex alignment
+@each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-create($breakpoint){
+        $infix: breakpoint-infix($breakpoint,$grid-breakpoints);
+        .flex#{$infix}-row {
+            flex-direction: row !important;
+            -moz-align-self: row !important;
+            -webkit-align-self: row !important;
+            -ms-align-self: row !important;
+        }
+        .flex#{$infix}-column{
+            flex-direction: column  !important;
+            -moz-align-self: column !important;
+            -webkit-align-self: column !important;
+            -ms-align-self: column !important;
+        }
+        .flex#{$infix}-row-reverse{
+            flex-direction: row-reverse !important;
+            -moz-align-self: row-reverse !important;
+            -webkit-align-self: row-reverse !important;
+            -ms-align-self: row-reverse !important;
+        }
+        .flex#{$infix}-column-reverse{
+            flex-direction: column-reverse !important;
+            -moz-align-self: column-reverse !important;
+            -webkit-align-self: column-reverse!important;
+            -ms-align-self: column-reverse!important;
+        }
+        .flex#{$infix}-wrap{
+            flex-wrap: wrap !important;
+            -moz-align-self: wrap  !important;
+            -webkit-align-self: wrap  !important;
+            -ms-align-self: wrap  !important;
+        }
+        .flex#{$infix}-nowrap{
+            flex-wrap: nowrap !important;
+            -moz-align-self: nowrap  !important;
+            -webkit-align-self: nowrap  !important;
+            -ms-align-self: nowrap  !important;
+        }
+        .flex#{$infix}-wrap-reverse{
+            flex-wrap: wrap-reverse !important;
+            -moz-align-self: wrap-reverse !important;
+            -webkit-align-self: wrap-reverse !important;
+            -ms-align-self: wrap-reverse !important;
+        }
+        .flex#{$infix}-fill{
+            flex: 1 1 auto !important;
+            -moz-align-self: 1 1 auto !important;
+            -webkit-align-self: 1 1 auto !important;
+            -ms-align-self: 1 1 auto !important;
+        }
+        .flex#{$infix}-grow-0{
+            flex-grow: 0 !important;
+            -moz-align-self:0  !important;
+            -webkit-align-self: 0  !important;
+            -ms-align-self:0  !important;
+        }
+        .flex#{$infix}-grow-1{
+            flex-grow: 1 !important;
+            -moz-align-self: 1 !important;
+            -webkit-align-self: 1 !important;
+            -ms-align-self:1 !important;
+        }
+        .flex#{$infix}-shrink-0{
+            flex-shrink:0 !important;
+            -moz-align-self: 0 !important;
+            -webkit-align-self: 0 !important;
+            -ms-align-self:0 !important;
+        }
+        .flex#{$infix}-shrink-1{
+            flex-shrink:1 !important;
+            -moz-align-self: 1 !important;
+            -webkit-align-self: 1 !important;
+            -ms-align-self: 1 !important;
+        }
+
+        //Justify contents
+        .justify-content#{$infix}-start{
+            justify-content: flex-start !important;
+            -moz-align-self: flex-start !important;
+            -webkit-align-self: flex-start !important;
+            -ms-align-self: flex-start !important; 
+        }
+        .justify-content#{$infix}-end{
+            justify-content: flex-end !important;
+            -moz-align-self: flex-end !important;
+            -webkit-align-self: flex-end !important;
+            -ms-align-self: flex-end !important;
+        }
+        .justify-content#{$infix}-center{
+            justify-content: center !important;
+            -moz-align-self:  center  !important;
+            -webkit-align-self: center !important;
+            -ms-align-self:  center  !important;
+        }
+        .justify-content#{$infix}-between{
+            justify-content: space-between !important;
+            -moz-align-self:space-between!important;
+            -webkit-align-self: space-between !important;
+            -ms-align-self: space-between !important;
+        }
+        .justify-content#{$infix}-around{
+            justify-content: space-around !important;
+            -moz-align-self: space-around !important;
+            -webkit-align-self: space-around !important;
+            -ms-align-self: space-around !important;
+        }
+
+        //Align items
+        .align-items#{$infix}-top{
+            align-items: flex-start !important;
+            -moz-align-self: flex-start !important;
+            -webkit-align-self: flex-start !important;
+            -ms-align-self: flex-start !important;
+        }
+        .align-items#{$infix}-bottom{
+            align-items: flex-end !important;
+            -moz-align-self: flex-end !important;
+            -webkit-align-self: flex-end !important;
+            -ms-align-self: flex-end !important;
+        }
+        .align-items#{$infix}-middle{
+            align-items: center !important;
+            -moz-align-self: center !important;
+            -webkit-align-self: center !important;
+            -ms-align-self: center !important;
+        }
+        .align-items#{$infix}-baseline{
+            align-items: baseline !important;
+            -moz-align-self:  baseline !important;
+            -webkit-align-self:  baseline !important;
+            -ms-align-self:  baseline !important;
+        }
+        .align-items#{$infix}-stretch{
+            align-items: stretch !important;
+            -moz-align-self: stretch !important;
+            -webkit-align-self: stretch !important;
+            -ms-align-self: stretch !important;
+        }
+
+        //Align content
+        .align-content#{$infix}-start{
+            align-content: flex-start !important;
+            -moz-align-self: flex-start !important;
+            -webkit-align-self: flex-start !important;
+            -ms-align-self: flex-start !important;
+        }
+        .align-content#{$infix}-end{
+            align-content: flex-end !important;
+            -moz-align-self: flex-end !important;
+            -webkit-align-self: flex-end !important;
+            -ms-align-self: flex-end !important;
+        }
+        .align-content#{$infix}-center{
+            align-content: center !important;
+            -moz-align-self: center !important;
+            -webkit-align-self: center !important;
+            -ms-align-self: center !important;
+        }
+        .align-content#{$infix}-between{
+            align-content: space-between !important;
+            -moz-align-self: space-between !important;
+            -webkit-align-self: space-between !important;
+            -ms-align-self: space-between !important;
+        }
+        .align-content#{$infix}-around{
+            align-content: space-around !important;
+            -moz-align-self: space-around !important;
+            -webkit-align-self: space-around !important;
+            -ms-align-self: space-around !important;
+        }   
+        .align-content#{$infix}-stretch{
+            align-content: stretch !important;
+            -moz-align-self: stretch !important;
+            -webkit-align-self: stretch !important;
+            -ms-align-self: stretch !important;
+        }
+
+        // align-self
+        .align-self#{$infix}-auto{
+            align-self: auto !important;
+            -moz-align-self: auto !important;
+            -webkit-align-self: auto !important;
+            -ms-align-self: auto !important;
+        }
+        .align-self#{$infix}-start{
+            align-self: flex-start !important;
+            -moz-align-self: flex-start !important;
+            -webkit-align-self: flex-start !important;
+            -ms-align-self: flex-start !important;
+        }
+        .align-self#{$infix}-end{
+            align-self: flex-end !important;
+            -moz-align-self: flex-end !important;
+            -webkit-align-self: flex-end !important;
+            -ms-align-self: flex-end !important;
+        }
+        .align-self#{$infix}-center{
+            align-self: center !important;
+            -moz-align-self: center !important;
+            -webkit-align-self:center !important;
+            -ms-align-self: center !important;
+        }
+        .align-self#{$infix}-baseline{
+            align-self: baseline !important;
+            -moz-align-self: baseline !important;
+            -webkit-align-self: baseline !important;
+            -ms-align-self: baseline !important;
+        }
+        .align-self#{$infix}-stretch{
+            align-self: stretch !important;
+            -moz-align-self: stretch !important;
+            -webkit-align-self: stretch !important;
+            -ms-align-self: stretch !important;
+        }
+    }
+}

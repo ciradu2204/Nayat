@@ -1,0 +1,167 @@
+body{
+    position: relative;
+    }
+    .fa-bars{
+    position: absolute;
+    right: 0;
+    top:0;
+    
+    }
+    
+    .logo{
+    margin-top: 40px;
+    }
+    #naya{
+    width: 100px;
+    margin-bottom: 20px;
+    height: 100px;
+
+    }
+    .all{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    
+    .image{
+    
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    
+    }
+    
+    
+    .title{
+    display: flex;
+    justify-content: center;
+    }
+   .id{
+       margin-left: 0%;
+       margin-top: 0%;
+       padding: 0px;
+   }
+    .footerImage{
+    display: flex;
+    justify-content: center;
+    margin-top: 350px;
+    font-size: 7px;
+    }
+    ce-card{
+        // border: solid  2px rgb(187, 185, 185);
+        border-radius: 14px;
+        padding: 0px;
+        margin: 10px;
+        box-shadow:0px 0px 5px 0px gainsboro;
+    }
+    .fa-map-marker-alt{
+        color: #143D59;
+        margin-left: 165px;
+    }
+ 
+    #label1{
+      
+        color: rgb(21, 76, 112);
+        margin-bottom: 5px;
+        margin-top:0px;
+        
+        
+        
+   }
+ 
+       
+   #incident{
+     
+       color: #143D59;
+       margin-left: 10px;
+   }
+   .fa-user{       
+      font-size: 20px;     
+      background-color: white;  
+      border-color:#143D59;      
+      border-style: solid;      
+       border-width: 4px;     
+       border-radius: 100%;   
+       padding: 6px;      
+       color:#143D59;
+       margin-left: 10px;
+     }
+   #information{       
+        margin-left:50px;   
+        margin-top: -50px;          
+     }
+      
+    
+    #SOS{
+        margin-left: 10px;
+        color: #143D59;
+    }
+    #help{
+        
+        color: grey;
+        margin-left: 34px;
+    }
+    .accept{
+        margin-top: 5px;
+        background-color: rgb(64, 212, 64);
+        border-radius: 14px;
+        width: 70px;
+        height: 30px;
+        color: white;
+        margin-bottom: 5px;
+        margin-left: 30px;
+     
+        
+       
+    }
+    .reject{
+        margin-top: 5px;
+        background-color: red;
+        border-radius: 14px;
+        width: 70px;
+        height: 30px;
+        color: white;
+        margin-bottom: 5px;
+       margin-left: 40px;
+        
+        
+        
+    }
+   
+ 
+    .hr{
+
+  
+     font-size: 0.0px;
+     color: whitesmoke;
+     box-shadow: -0.2px -0.2px -0.2px -0.2px;
+     margin-top: 5px;
+        
+        //  margin-bottom: 5px;
+        //  margin-left:0px;
+        //  margin-right: 0px;
+    }
+    #one{  
+        color:#143D59;        
+      
+    }
+    @media screen and (max-width: 322px) {
+        .fa-map-marker-alt{
+            color: #143D59;
+            margin-left: 100px;
+        }
+
+        .reject{
+            margin-top: 5px;
+            background-color: red;
+            border-radius: 14px;
+            width: 70px;
+            height: 30px;
+            color: white;
+            margin-bottom: 5px;
+           margin-left: 20px;
+            
+            
+            
+        }
+       
+      }

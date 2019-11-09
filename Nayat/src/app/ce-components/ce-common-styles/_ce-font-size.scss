@@ -1,0 +1,7 @@
+@mixin responsive-font-size($font-size,$important:false) {
+    $font-size-unit:if(type-of($font-size)=="number", unit($font-size),false);
+    $resposive-font-size-suffix:if($important,"!important","")
+}
+@mixin font-size($font-size, $important:false) {
+    @include responsive-font-size($font-size,$important);
+}

@@ -1,0 +1,226 @@
+@import 'ce-var';
+$ce-transition-duration: 280ms !default;
+$ce-transition-timing: $ce-out-slow-timing-function;
+
+//Theme Colors
+@function theme-color($key: "primary"){
+    @return map-get($theme-colors, $key);
+}
+
+//color contrast functions
+@function color-contrast($color,$dark:$contrast-text-dark,$light:$contrast-text-light){
+    $red:red($color);
+    $blue:blue($color);
+    $green:green($color);
+    $contrast:(($red*299)+($green*587)+($blue*144))/1000;
+    @if($contrast >= $contrasted-threshold){
+        @return $dark;
+    }@else{
+        @return $light;
+    }
+}
+
+//transition functions
+@function ce-transition-property-value($duration: $ce-transition-duration, $easing:$ce-transition-timing){
+    @return box-shadow #{$duration} #{$easing};
+}
+
+@mixin ce-transition ($duration: $ce-transition-duration, $easing:$ce-transition-timing ){
+    transition: ce-transition-property-value($duration,$easing);
+}
+
+
+//Gradients
+@mixin gradient-bg($color) {
+    @if $enable-gradients{
+        background: $color linear-gradient(180deg,mix($body-bg,$color,15%),$color) repeat-x;
+    }@else{
+        background-color: $color;
+    }
+}
+
+
+//grid
+//validate minimum breakpoint width is null or not
+@function breakpoint-min($name,$breakpoints:$grid-breakpoints){
+    $min: map-get($breakpoints,$name);
+    @return if($min != 0, $min, null);
+}
+//If check null it return blank or return the name with hypen in front 
+@function breakpoint-infix($name,$breakpoints:$grid-breakpoints){
+    @return if(breakpoint-min($name,$breakpoints)==null,"","-#{$name}");
+}
+//make the @media queries
+@mixin media-breakpoint-create($name,$breakpoints:$grid-breakpoints){
+    $min: breakpoint-min($name,$breakpoints);
+    @if $min{
+        @media(min-width: $min){
+            @content;
+        }
+    }@else{
+        @content;
+    }
+}
+@mixin make-ce-grid($gutter:$grid-gutter-width){
+    width: 100%;
+    // padding-right: $gutter/2;
+    // padding-left: $gutter/2;
+    margin-right: auto;
+    margin-left:auto;
+}
+
+@mixin make-ce-grid-max-width($max-width:$grid-max-width,$breakpoints:$grid-breakpoints){
+    @each $breakpoint, $grid-max-widths in $max-width{
+        @include media-breakpoint-create($breakpoint,$breakpoints){
+            max-width: $grid-max-widths;
+        }
+    }
+}
+
+//row
+@mixin make-ce-row($gutter:$grid-gutter-width){
+    display: flex;
+    flex-wrap: wrap;
+    // margin-right: $gutter/2;
+    // margin-left: $gutter/2;
+}
+
+//border-radius
+@mixin border-radius($radius:$border-radius,$fallback-border-radius:false) {
+    @if($enable-rounded){
+        border-radius: $radius;
+    }
+    @else if $fallback-border-radius != false{
+        border-radius: $fallback-border-radius;
+    }
+}
+
+//hover
+@mixin hover {
+    &:hover{
+        @content;
+    }
+}
+
+//box-shadow
+@mixin box-shadow($shadow...) {
+    $result:();
+    @if(length($shadow)==1){
+        $result:$shadow;
+    }@else{
+        @for $i from 1 through length($shadow){
+            @if nth($shadow,$i)!="none"{
+                $result: append($result , nth($shadow, $i) , "comma" );
+            }
+        }
+    }
+    @if(length($result)>0){
+        box-shadow: $result;
+    }
+}
+
+
+//hover
+@mixin hover{
+    &:hover{
+        @content;
+    }
+}
+
+//ce-buttons
+@mixin ce-button-size($padding-y,$padding-x,$font-size,$line-height,$border-radius) {
+    padding: $padding-y $padding-x;
+    // @include font-size($font-size);
+    line-height: $line-height;
+    @include border-radius($border-radius,0);
+}
+//button color variant
+@mixin button-variant($bg,$border,$hover-bg:darken($bg,7.5%),$hover-border:darken($border,10%),$active-bg:darken($bg,10%),$active-border:darken($border,12.5%)) {
+    color:color-contrast($bg); 
+    @include gradient-bg($bg);   
+    border-color: $border;
+    @include box-shadow($btn-box-shadow);
+    @include hover{
+        color: color-contrast($hover-bg);
+        @include gradient-bg($hover-bg);
+        border-color: $hover-border;
+    }
+    &:focus,
+    &.focus{
+        @if $enable-shadows{
+            box-shadow: $btn-box-shadow, 0 0 0 $btn-focus-width rgba(mix(color-contrast($bg),$border,15%),.5);
+        }@else{
+            box-shadow: 0 0 0 $btn-focus-width rgba(mix(color-contrast($bg),$border,15%),.5);
+        }
+    }
+    &.disabled,
+    &:disabled{
+        color: color-contrast($bg);
+        background-color: $bg;
+        border-color: $border;
+        @if $enable-gradients{
+            background: none;
+        }
+    }
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active,
+    .show>&.dropdown-toggle{
+        color:color-contrast($active-bg);
+        background: $active-bg;
+        @if $enable-gradients{
+            background-image: none;
+        }
+        border-color: $active-border;
+        &:focus{
+            @if $enable-shadows and $btn-active-box-shadow !=none{
+                box-shadow: $btn-active-box-shadow, 0 0 0 $btn-focus-width rgba(mix(color-contrast($bg),$border,15%),.5);
+            }@else{
+                box-shadow: 0 0 0 $btn-focus-width rgba(mix(color-contrast($bg),$border,15%),.5);
+            }
+        }
+    }   
+}
+//button-outline
+@mixin button-outline-varient($color,$color-hover:color-contrast($color),$active-bg:$color,$active-border:$color) {
+    color: $color;
+    border-color: $color;
+    @include hover{
+        color:$color-hover;
+        background-color: $active-bg;
+        border-color:$active-border;
+    }
+    &:focus,
+    &.focus{
+        box-shadow: 0 0 0 $btn-focus-width rgba($color,.5);
+    }
+    &:disaled,
+    &.disabled{
+        color:$color;
+        background-color:transparent;
+    }
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active,
+    .show > &.dropdown-toggle{
+        color: color-contrast($active-bg);
+        background-color: $active-bg;
+        border-color: $active-border;
+        &:focus{
+            @if $enable-shadows and $btn-active-box-shadow != none{
+                box-shadow: $btn-active-box-shadow, 0 0 0 $btn-focus-width rgba($color,.5);
+            }@else{
+                box-shadow: 0 0 0 $btn-focus-width rgba($color,.5);
+            }
+        }
+    }
+}
+
+//ce-fab
+@mixin ce-fab($size, $padding) {
+    min-width: 0;
+    border-radius: $ce-fab-border-radius;
+    width:$size;
+    height:$size;
+    padding: 0;
+    flex-shrink: 0;
+    vertical-align: middle;
+}

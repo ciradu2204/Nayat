@@ -1,0 +1,55 @@
+.fontXS{
+  font-size: calc(8px + (10 - 8) * ((100vw - 300px) / (1600 - 300)));
+}
+
+.fontS{
+  font-size: calc(12px + (14 - 12) * ((100vw - 300px) / (1600 - 300)));
+}
+
+.fontM{
+  font-size: calc(16px + (18 - 16) * ((100vw - 300px) / (1600 - 300)));
+}
+
+.fontL{
+  font-size: calc(20px + (22 - 20) * ((100vw - 300px) / (1600 - 300)));
+}
+
+.fontXL{
+  font-size: calc(24px + (26 - 24) * ((100vw - 300px) / (1600 - 300)));
+}
+.font-underline {
+  text-decoration: underline;
+}
+.font-overline {
+  text-decoration: overline;
+}
+.font-strikethrough {
+  text-decoration: line-through;
+}
+.h1{
+  font-size:2rem;
+}
+.h2{
+  font-size:1.5em;
+}
+.h3{
+  font-size:1rem;
+}
+.text-align-right{
+  text-align: right;
+}
+.text-align-justify{
+  text-align:justify;
+}
+.text-align-left{
+  text-align: left;
+}
+.text-align-start{
+  text-align: start;
+}
+.text-align-center{
+  text-align: center;
+}
+.text-align-end{
+  text-align: end;
+}

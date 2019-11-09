@@ -1,0 +1,190 @@
+body{
+  position:relative;
+  }
+  #logoImage{
+  position: absolute;
+  height: 40px;
+  width: 44px;
+  margin-top: 200px;
+  right: 50px;
+  border-radius: 60%;
+  }
+  #CircleButton{
+  display: none;
+  }
+  .CircleButton{
+  position: absolute;
+  cursor: pointer;
+  border: solid ;
+  color: grey;
+  background-color:white;
+  width: 40px;
+  height: 44px;
+  margin-top: 200px;
+  border-radius: 60%;
+  right:50px;
+  }
+  #icons{    margin-left: -25.0px;    
+    margin-bottom: -8.0px;    
+    margin-top: -9px;  
+      width: 400%;    
+     height: 150%;    
+     object-fit: contain;   }
+  .CircleButton:before, .CircleButton:after{
+  position: absolute;
+  content: '';
+  height: 2em;
+  width: 2em;
+  background-color: orange;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-radius: .5em;
+  transition: all .25s;
+  }
+  
+  #triggerButton{
+  display:none;
+  }
+  .CircleButton:before{
+  height: 2em;
+  width: .2em;
+  }
+  .CircleButton:after{
+  width: 2em;
+  height: .2em;
+  }
+  
+  .CircleButton:before { transform: rotatez(-45deg); }
+  
+  .CircleButton:after { transform: rotatez(-45deg); }
+  
+  .one, .two, .three, .four, .five{
+  cursor: pointer;
+  position: absolute;
+  padding: 12px;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  opacity: 0;
+  right: 120px;
+  margin-top: 200px;
+  z-index: 1;
+  transform: rotateZ(90deg);
+  font-size: 1em;
+  color: #fff;
+  transition-property: all;
+  transition-duration: .35s;
+  border-color:white;
+  
+  }
+  
+  .triggerButton .one, .triggerButton .two, .triggerButton .three, .triggerButton .four, .five { opacity: 1; }
+
+  .triggerButton  .four{
+    background-color: #38841A ;
+    transform:  translatex(1em) translateY(0em);
+    transition-delay: .1s;
+    
+    }
+  .triggerButton .two {
+  background-color:  #298CEA ;
+  transform: translateX(2em) translateY(-3em);
+  transition-delay: .3s;
+  
+  }
+  
+  .triggerButton  .three {
+  background-color:#F0B921 ;
+  transform: translatex(5em) translateY(4em);
+  transition-delay: .2s;
+  
+  }
+  
+  .triggerButton  .one {
+    background-color: #239C8D;
+    transform: translateY(3em) translateX(2em);
+    transition-delay: .4s;
+    }
+ 
+    .triggerButton  .five{
+      background-color: #7B26A5 ;
+      color: white;
+      border-color: #fff;
+      transform: translatex(5em) translateY(-4em);
+    
+      
+      }
+  .triggerButton .one:hover, .triggerButton .two:hover, .triggerButton .three:hover, .triggerButton .four:hover,.triggerButton .five { opacity: .9; }
+  
+  .Buttons{
+    display: none;
+    
+  }
+  
+  .Buttons .six{
+    background-color:red;
+    height: 36px;
+    -moz-border-radius:100px;
+    -webkit-border-radius: 100px;
+    margin-bottom: 300px;
+    margin-right: 100px;
+     width: 36px;
+     transform:translatex(10em) translateY(19em);
+    color: white;
+  align-items: center;
+  font-size: 1em;
+  
+    }
+    .seven{
+      position: absolute;
+      top: -134px;
+      right: 100px;
+   
+    }
+    .six{
+        
+      position: absolute;
+    
+      right: 134px;
+      top: -64px;
+    }
+  .Buttons .seven {
+   
+    background-color:rgb(51, 212, 51);
+    height: 36px;
+    -moz-border-radius:100px;
+    -webkit-border-radius: 100px;
+    margin-bottom: 300px;
+    margin-right: 100px;
+    width: 36px;
+    transform:translatex(8em) translateY(19em);
+    color: white;
+  align-items: center;
+  font-size: 1em;
+  
+   }
+
+   .seven a{
+   color:white;
+   }
+   .ambulance{
+     position: absolute;
+     margin-top: 200px;
+    right: 50px;
+   }
+  
+   .fa-comment{
+    margin-left: 10px;
+     margin-top: 10px;
+   }
+   .fa-phone{
+    margin-left: 10px;
+    margin-top: 10px;
+ 
+   }
+   .ambulance:hover{
+     background-color: white;
+   }

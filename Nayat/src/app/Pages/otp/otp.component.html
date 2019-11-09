@@ -1,0 +1,88 @@
+<body>
+  <ce-grid>
+    <ce-row>
+      <ce-col colSize='6' colSizeSm='6' colSizelg='6' colSizeXl='6'> <i class="fas fa-arrow-left"></i> </ce-col>
+      <ce-col colSize='6' colSizeSm='6' colSizelg='6' colSizeXl='6'> <i class="fas fa-bars"></i> </ce-col>
+    </ce-row>
+    <ce-row class="text-align-center mt-2">
+      <ce-col colSize="12" colSizeSm="12" colSizeMd="12" colSizelg="12" colSizeXl="12"> <img id="logo"
+          src="../../../assets/nayat-logo-fi.png" alt="image here"> </ce-col>
+    </ce-row>
+  </ce-grid>
+
+
+  <ce-grid>
+    <ce-grid>
+      <div class='enterOtpTittle'>
+        <ce-row>
+          <ce-label id='enterOtpTittle'>Enter OTP</ce-label>
+        </ce-row>
+      </div>
+    </ce-grid>
+    <ce-grid>
+      <ce-row>
+
+        <ce-col colSize="3" colSizeSm="3" colSizeMd="3" colSizelg="3" colSizeXl="3"> <input ce-input type='number'
+            id='text1' class='otpNumber' maxLength="1"
+            oninput=" if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+            onkeyup="if (this.value.length === this.maxLength) this.Attribute = document.getElementById('text2').focus();">
+        </ce-col>
+        <ce-col colSize="3" colSizeSm="3" colSizeMd="3" colSizelg="3" colSizeXl="3"> <input ce-input type='number'
+            id='text2' class='otpNumber' maxLength="1"
+            oninput=" if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+            onkeyup="if (this.value.length === this.maxLength) this.Attribute = document.getElementById('text3').focus();">
+        </ce-col>
+        <ce-col colSize="3" colSizeSm="3" colSizeMd="3" colSizelg="3" colSizeXl="3"> <input ce-input type='number'
+            id='text3' class='otpNumber' maxLength="1"
+            oninput=" if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+            onkeyup="if (this.value.length === this.maxLength) this.Attribute = document.getElementById('text4').focus();">
+        </ce-col>
+        <ce-col colSize="3" colSizeSm="3" colSizeMd="3" colSizelg="3" colSizeXl="3"> 
+          <input ce-input type='number'
+            id='text4' class='otpNumber' maxLength="1"
+            oninput=" if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+        </ce-col>
+      </ce-row>
+    </ce-grid>
+    <ce-grid>
+      <div class='resendLink'>
+        <ce-row> <a id='link' href=''>Resend OTP</a> </ce-row>
+      </div>
+    </ce-grid>
+    <ce-grid>
+      <div id="submitButton">
+        <ce-row> <button ce-button class='submitLabel'> <a href="profile">Submit</a> </button> </ce-row>
+      </div>
+    </ce-grid>
+  </ce-grid>
+
+  <ce-grid>
+    <ce-row>
+            <ce-col colSizeSm="6" colSizeMd="6" colSizelg="6" colSizeXl="6">
+              <div class="m-1">
+                  <button  ce-button btnBlock color="dark"  round class="fontS">As customer</button>
+              </div>
+            </ce-col>
+            <ce-col colSizeSm="6" colSizeMd="6" colSizelg="6" colSizeXl="6">
+                <div class="m-1">
+                    <button  ce-button btnBlock color="dark"  class="fontS"  round>As driver</button>
+                </div>
+            </ce-col>
+    </ce-row>
+  </ce-grid>
+
+  <ce-grid>
+    <div class="Footer">
+      <ce-row class="text-align-center mt-2">
+        <ce-col colSize="12" colSizeSm="12" colSizeMd="12" colSizelg="12" colSizeXl="12">
+          <ce-row> <label id="footerLabel">POWERED BY</label> </ce-row>
+          <ce-row> <img src="../../../assets/CircleEdges EPS (2).png" class="footerImage"> </ce-row>
+        </ce-col>
+      </ce-row>
+    </div>
+  </ce-grid>
+
+ 
+   
+  
+</body>

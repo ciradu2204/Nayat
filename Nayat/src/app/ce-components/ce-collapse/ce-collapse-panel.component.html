@@ -1,0 +1,29 @@
+<div role="tab" [attr.aria-expanded]="ceActive" class="ce-collapse-header" (click)="clickHeader()">
+    <ng-container *ngIf="ceShowLocation">
+            <i class="material-icons location">
+                location_on
+            </i>
+    </ng-container>
+    <ng-container *ngIf="ceShowArrow" >
+        <i class="material-icons arrow"  [class.rotate-arrow]="ceActive">
+            arrow_right
+        </i>
+    </ng-container>
+    <ng-container [ngSwitch]="true">
+        <ng-container *ngSwitchCase="isTemplateRef(ceHeader)" [ngTemplateOutlet]="ceHeader"></ng-container>
+        <ng-container *ngSwitchCase="isEmptyString(ceHeader)">
+            <div class="pl-4 ml-1" [innerHTML]="ceHeader"></div>
+        </ng-container>
+    </ng-container>
+    <ng-container [ngTemplateOutlet]="ceExtra"></ng-container>
+    <div *ngIf="ceExtra" class="ce-collapse-extra">
+        <ng-container [ngTemplateOutlet]="ceExtra">{{ceExtra}}</ng-container>
+    </div>
+</div>
+<div class="ce-collapse-content"
+ [class.collapse-content-active]="ceActive"
+ [@collapseAnimation]="ceActive ? 'expanded':'hidden'">
+ <div class="ce-collapse-content-box">
+     <ng-content></ng-content>
+ </div>
+</div>

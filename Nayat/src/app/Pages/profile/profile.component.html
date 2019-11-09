@@ -1,0 +1,265 @@
+<body>
+  <div class="all">
+  <ce-grid>
+    <div class="topIcons">
+      <ce-row>
+        <ce-col colSize="12" colSizeSm="12" colSizeMd="12" colSizeLg="12" colSizeXl="12">
+          <i class="fas fa-arrow-left"></i>
+        </ce-col>
+        <ce-col colSize="12" colSizeSm="12" colSizeMd="12" colSizeLg="12" colSizeXl="12">
+          <i class="fas fa-bars"></i>
+        </ce-col>
+      </ce-row>
+    </div>
+  </ce-grid>
+
+  <ce-grid>
+    <div id="HeaderImage">
+      <ce-row>
+        <ce-col colSize="12" colSizeSm="12" colSizeMd="12" colSizeLg="12" colSizeXl="12">
+          <ce-label>
+            <img class="HeaderImage" src="../../../assets/nayat-logo-fi.png" alt="title">
+          </ce-label>
+        </ce-col>
+      </ce-row>
+    </div>
+  </ce-grid>
+
+  <ce-grid>
+    <div class="card1">
+      <ce-card>
+        <ce-row>
+          <ce-col class="user-icon" colSize="2.7" colSizeSm="2.7" colSizeMd="2.7" colSizeLg="2.7" colSizeXl="2.7">
+            <i class="far fa-user-circle"></i>
+          </ce-col>
+          <ce-col colSize="2.7" colSizeSm="2.7" colSizeMd="2.7" colSizeLg="2.7" colSizeXl="2.7">
+            <ce-row class="userName">
+              <ce-label id="cardlabel">Cynthia</ce-label>
+            </ce-row>
+            <ce-row>
+            <ce-col >
+              <ce-label id="cardlabel">A</ce-label>
+            </ce-col>
+            <ce-col>
+                <ce-label class="bloodtype">-ve <i class="fas fa-burn"></i></ce-label>
+            </ce-col>
+          </ce-row>
+          </ce-col>
+
+          <ce-col colSize="2.7" colSizeSm="2.7" colSizeMd="2.7" colSizeLg="2.7" colSizeXl="2.7">
+            <ce-row>
+              <ce-label id="cardlabel">(Age 24)</ce-label>
+            </ce-row>
+          </ce-col>
+
+        </ce-row>
+      </ce-card>
+    </div>
+  </ce-grid>
+
+  <ce-grid>
+
+
+    <div class="form-group1">
+      <ce-col colSize="12" colSizeSm="12" colSizeMd="12" colSizeLg="12" colSizeXl="12">
+        <ce-row>
+      
+             <input id="input" type="text" required />   
+              <label for="input" alt="Enter SOS Message" placeholder="Enter SOS Message"></label>
+            
+        </ce-row>
+      </ce-col>
+    </div>
+
+    <div class="save">
+
+      <ce-row>
+        <button id="button" ce-button (click)="savecontact()"> Save</button>
+      </ce-row>
+    </div>
+
+  </ce-grid>
+
+  <div id="contacts">
+  <ce-card class="card2">
+    <ce-grid>
+     
+        <div class="savedContacts">
+          <ce-row>
+
+            <ce-col colSize="0.5" colSizeSm="0.5" colSizeMd="0.5" colSizeLg="0.5" colSizeXl="0.5">
+              <i class="far fa-user"></i>
+            </ce-col>
+
+            <ce-col colSize="2.5" colSizeSm="2.5" colSizeMd="2.5" colSizeLg="2.5" colSizeXl="2.5">
+              <ce-row>
+                <ce-label class='name'>Sathiya K</ce-label>
+              </ce-row>
+              <ce-row>
+                <ce-label class='phone'> +250788110276</ce-label>
+              </ce-row>
+            </ce-col>
+           
+            <div class="icons">
+              <ce-col colSize="9" colSizeSm="9" colSizeMd="9" colSizeLg="9" colSizeXl="9">
+                <ce-row>
+                  <i class="fas fa-edit"></i>
+                </ce-row>
+                <br>
+                <ce-row>
+                  <i class="far fa-trash-alt"></i>
+                </ce-row>
+              </ce-col>
+            </div>
+              </ce-row>
+             
+            </div>
+         </ce-grid>
+           <hr>
+
+    <ce-grid>
+      <div class="savedContacts1">
+        <ce-row>
+          <ce-col colSize="0.5" colSizeSm="0.5" colSizeMd="0.5" colSizeLg="0.5" colSizeXl="0.5">
+            <i class="far fa-user"></i>
+          </ce-col>
+
+          <ce-col colSize="2.5" colSizeSm="2.5" colSizeMd="2.5" colSizeLg="2.5" colSizeXl="2.5">
+            <ce-row>
+              <ce-label class='name'>Veera S </ce-label>
+            </ce-row>
+            <ce-row>
+              <ce-label class='phone'> +250788112324</ce-label>
+            </ce-row>
+          </ce-col>
+
+          <div class="icons">
+            <ce-col colSize="9" colSizeSm="9" colSizeMd="9" colSizeLg="9" colSizeXl="9">
+              <ce-row>
+                <i class="fas fa-edit"></i>
+              </ce-row>
+              <br>
+              <ce-row>
+                <i class="far fa-trash-alt"></i>
+              </ce-row>
+            </ce-col>
+          </div>
+        </ce-row>
+      </div>
+    </ce-grid>
+
+    <hr>
+
+    <ce-grid>
+      <div class="savedContacts2">
+        <ce-row>
+
+          <ce-col colSize="0.5" colSizeSm="0.5" colSizeMd="0.5" colSizeLg="0.5" colSizeXl="0.5">
+            <i class="far fa-user"></i>
+          </ce-col>
+
+          <ce-col colSize="2.5" colSizeSm="2.5" colSizeMd="2.5" colSizeLg="2.5" colSizeXl="2.5">
+            <ce-row>
+              <ce-label class='name'>Ravi N</ce-label>
+            </ce-row>
+            <ce-row>
+              <ce-label class='phone'> +250788119846</ce-label>
+            </ce-row>
+          </ce-col>
+
+          <div class="icons">
+            <ce-col colSize="9" colSizeSm="9" colSizeMd="9" colSizeLg="9" colSizeXl="9">
+              <ce-row>
+                <i class="fas fa-edit"></i>
+              </ce-row>
+              <br>
+              <ce-row>
+                <i class="far fa-trash-alt"></i>
+              </ce-row>
+            </ce-col>
+          </div>
+        </ce-row>
+      </div>
+    </ce-grid>
+    <hr>
+
+
+    <ce-grid>
+      <div class="addButton">
+        <ce-row>
+          <button id="button" ce-button (click)="showPopup()">
+            <i class="fas fa-user-plus"></i>Add Contact </button>
+        </ce-row>
+      </div>
+     
+    </ce-grid>
+
+  </ce-card>
+</div>
+  <ce-grid>
+    <div class="Footer">
+      <ce-row class="text-align-center mt-2">
+        <ce-col colSize="12" colSizeSm="12" colSizeMd="12" colSizeLg="12" colSizeXl="12">
+          <ce-row>
+            <label id="footerLabel">POWERED By </label>
+          </ce-row>
+          <ce-row>
+            <img src="../../../assets/CircleEdges EPS (2).png" class="footerImage">
+          </ce-row>
+        </ce-col>
+      </ce-row>
+    </div>
+  </ce-grid>
+
+  <!-- pop up button -->
+  <ce-grid>
+    <div id="overlay">
+      <form class="formcontainer">
+        <ce-col colSize="12" colSizeSm="12" colSizeMd="12" colSizeLg="12" colSizeXl="12">
+          <div class="closeIcon">
+          <ce-row>
+            <span ><i (click)="closePopup()" class="far fa-times-circle"></i></span>
+          </ce-row>
+          </div>
+          <div class="form-group">
+            <ce-col colSize="12" colSizeSm="12" colSizeMd="12" colSizeLg="12" colSizeXl="12">
+              <ce-row>
+               
+                <input id="input" type="text" required />   
+                <label for="input" alt="Name" placeholder="Name"></label>
+              </ce-row>
+            </ce-col>
+          </div>
+
+
+          <div class="form-group">
+            <ce-col colSize="12" colSizeSm="12" colSizeMd="12" colSizeLg="12" colSizeXl="12">
+              <ce-row>
+             <input id="input" type="text" required />   
+             <label for="input" alt="Mobile Number" placeholder="Mobile Number"></label>
+              </ce-row>
+            </ce-col>
+          </div>
+
+          <div class="form-group">
+            <ce-col colSize="12" colSizeSm="12" colSizeMd="12" colSizeLg="12" colSizeXl="12">
+              <ce-row>
+              
+                <input id="input" type="text" required />   
+                <label for="input" alt="Relationship" placeholder="Relationship"></label>
+                
+              </ce-row>
+            </ce-col>
+          </div>
+
+          <div id="addContact">
+            <ce-row>
+              <button id="button" ce-button>Add</button>
+            </ce-row>
+          </div>
+        </ce-col>
+      </form>
+    </div>
+  </ce-grid>
+</div>
+</body>

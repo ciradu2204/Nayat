@@ -1,0 +1,26 @@
+.container {
+  // display: inline;
+  position: relative;
+  padding: 1.5em;
+  cursor: pointer;
+  border: 1px solid black;
+  // margin:20px;
+  border-radius: 20px;
+  font-size: 1.5em;
+  }
+.container:hover{
+  border: 1px solid #1dd1a1;
+}
+.container input:checked{
+  border:1px solid  #1dd1a1;
+}
+.active{
+  border: 1px solid #1dd1a1;
+}
+.container input {
+  
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+

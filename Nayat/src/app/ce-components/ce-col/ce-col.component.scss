@@ -1,0 +1,64 @@
+@mixin make-ce-col($size,$columns:$grid-columns){
+    flex:0 0 percentage($size/$columns);
+    max-width: percentage($size/$columns);
+}
+@mixin make-ce-col-offset($size,$columns:$grid-columns){
+    $num:$size/$columns;
+    margin-left:if($num==0,0,percentage($num));
+}
+@mixin make-grid-columns($columns:$grid-columns,$gutter:$grid-gutter-width,$breakpoints:$grid-breakpoints) {
+    //common properties
+    %ce-grid-columns{
+        position: relative;
+        width:100%;
+        // padding-right: $gutter/2;
+        // padding-left: $gutter/2;
+    }
+    @each $breakpoint in map-keys($breakpoints){
+        $infix:breakpoint-infix($breakpoint,$breakpoints);
+        @for $i from 1 through $columns{
+            .ce-col#{$infix}-#{$i}{
+                @extend %ce-grid-columns;
+            }
+        }
+        .ce-col#{$infix},.ce-col#{$infix}-auto{
+            @extend %ce-grid-columns;
+        }
+        @include media-breakpoint-create($breakpoint,$breakpoints){
+            .ce-col#{$infix}{
+                flex-basis: 0;
+                flex-grow: 1;
+                max-width: 100%;
+            }
+            .ce-col#{$infix}-auto{
+                float: 0 0 auto;
+                width:auto;
+                max-width: 100%;
+            }
+            @for $i from 1 through $columns{
+                .ce-col#{$infix}-#{$i}{
+                    @include make-ce-col($i,$columns);
+                }
+            }
+            .ce-order#{$infix}-first{
+                order: -1;
+            }
+            .ce-order#{$infix}-last{
+                order: $columns+1;
+            }
+            @for $i from 0 through $columns{
+                .ce-order#{$infix}-#{$i}{
+                    order:$i;
+                }
+            }
+            @for $i from 0 through ($columns - 1){
+                @if not ($infix=="" and $i==0){
+                    .offset#{$infix}-#{$i}{
+                        @include make-ce-col-offset($i,$columns);
+                    }
+                }
+            }
+        }
+    }
+}
+@include make-grid-columns();

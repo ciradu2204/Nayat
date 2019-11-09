@@ -1,0 +1,44 @@
+.moodrating { 
+    border: none;
+    float: left;
+  }
+  
+  .moodrating > input { display: none; } 
+  .moodrating > label:before { 
+    // margin: 5px;
+    font-size: 3em;
+    font-family: 'Material Icons';
+    display: inline-block;
+    cursor: pointer;
+}
+      
+  .moodrating > .zero:before { 
+    content: '\e814';
+    position: relative;
+  }
+  .moodrating > .one:before { 
+    content: '\e7f3';
+     position: relative;
+  }
+  
+  .moodrating > .two:before { 
+        content: '\e811';
+
+    position: relative;;
+  }
+
+  .moodrating > .three:before { 
+    content: '\e813';
+
+    position: relative;;
+  }
+
+  .moodrating > .four:before { 
+    content: '\e7f2';
+    position: relative;;
+  }
+  .moodrating > label { 
+    color:grey; 
+    float: right; 
+  }
+  .moodrating > input:checked + label { color: #FFD700;  } 

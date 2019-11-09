@@ -1,0 +1,144 @@
+// top area css
+body{
+    position: relative;
+}
+.fa-bars{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.logo{
+    margin-top: 40px;
+}
+#logo{
+    width: 100px;
+    margin-bottom: 40px;
+}
+
+
+// body css
+
+.hr { 
+
+font-size: 0.0px;
+color: whitesmoke;
+box-shadow: -0.2px -0.2px -0.2px -0.2px;
+margin-top: 5px;
+   }
+
+ce-label{
+    color: #143D59;
+}
+ce-card{
+    // border: solid  2px rgb(187, 185, 185);
+    border-radius: 15px;
+    padding: 0px;
+    margin: 10px;
+   box-shadow:0px 0px 5px 0px gainsboro;
+}
+
+#label1 {
+  
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#label2{
+    margin-left: 10px;
+}
+#label3{
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-start;
+}
+#label4{
+    margin-right: 5px;
+}
+#label5{
+    margin-left: 10px;
+    
+}
+#label6{
+    margin-left: 18px;
+    color: grey;
+}
+
+.fa-user{     
+      font-size: 20px;       
+      background-color: white;       
+      border-color:#143D59;       
+      border-style: solid;       
+      border-width: 4px;       
+      border-radius: 100%;       
+      padding: 6px;       
+      color:#143D59;   
+      margin-top: 10px;
+    
+}
+#information{    
+
+    margin-left:50px;         
+    margin-top: -50px;           
+}
+.fa-comment{
+    border-radius: 100%;
+    background-color:	#34DD04;
+    color: white;
+    padding: 6px; 
+    font-size: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    margin-left: 80px;
+    margin-top: 10px;
+
+ 
+}
+.fa-phone{
+    border-radius: 100%;
+    background-color:#FE0702;
+    color: white;
+    padding: 6px;
+    font-size: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+#assignToButton{
+    border-radius: 14px;
+    background-color:#F4B41A;
+    cursor: pointer;
+    color: #143D59;
+    font-weight: bold;
+    margin-bottom: 12px;
+   
+   
+}
+.fa-map-marker-alt{
+    color: #143D59;
+    // margin-top: 45px;
+    margin-left: 140px;
+    
+}
+
+
+
+// footer css
+.footerImage{
+    height: 50px;
+    width: 50px; 
+     object-fit: contain;
+  }
+.Footer{
+    display: flex;
+    justify-content: center;
+    margin-top: 180px;
+    }
+    
+#footerLabel{
+    font-size: 7px
+    }
+
+.fullPage{
+    margin-left: 10px;
+    margin-right: 10px;
+}

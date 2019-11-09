@@ -1,0 +1,49 @@
+body{
+    position: relative;
+    color: #143D59;
+}
+img{
+    height: 20px;
+    width: 20px;
+
+}
+
+.fa-user{     
+    font-size: 30px;       
+    background-color: white;       
+    border-color:#143D59;       
+    border-style: solid;       
+    border-width: 4px;       
+    border-radius: 100%;       
+    padding: 10px;       
+    color:#143D59;   
+ 
+  
+}
+.time{
+   position: absolute;
+   right: 15px;
+   color: #143D59;
+}
+ 
+
+ce-card{
+    border-radius: 14px;
+    padding: 0px;
+    box-shadow:1px 1px 1px 1px gainsboro;
+    
+}
+
+hr { 
+    font-size: 0.0px;
+    color: whitesmoke;
+    box-shadow: -0.2px -0.2px -0.2px -0.2px;
+    margin-top: 5px; 
+  }
+ 
+.card{
+    margin-left: 20px;
+}
+#information{
+    margin-left: 20px;
+}

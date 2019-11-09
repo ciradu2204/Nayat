@@ -1,0 +1,94 @@
+[class^="cei-"], [class*=" cei-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'ce-icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.cei-auto:before {
+  content: "\e901";
+  color: #454f63;
+}
+.cei-ribbon:before {
+  content: "\e902";
+  font-size:2rem;
+}
+.cei-bike:before {
+  content: "\e903";
+  color: #454f63;
+}
+.cei-micro:before {
+  content: "\e904";
+  color: #454f63;
+}
+.cei-sedan:before {
+  content: "\e905";
+  color: #454f63;
+}
+.cei-suv:before {
+  content: "\e906";
+  color: #454f63;
+}
+.cei-ribbon:before {
+  content: "\e902";
+  color: #454f63;
+}
+.cei-starburst:before {
+  content: "\e900";
+  font-size:4rem;
+}
+.ribbon-primary{
+color:#3880ff !important;
+}
+.ribbon-secondary{
+color:#0cd1e8 !important;
+}
+.ribbon-tertiary{
+color:#7044ff !important;
+}
+.ribbon-success{
+color:#10dc60 !important;
+}
+.ribbon-warning{
+color:#ffce00 !important;
+}
+.ribbon-danger{
+color:#f04141 !important;
+}
+.ribbon-dark{
+color:#222428 !important;
+}
+.ribbon-medium{
+color:#989aa2 !important;
+}
+.ribbon-light{
+ color:#f4f5f8 !important;
+}
+.ribbontext{
+position: fixed;
+font-size: 0.6em;
+color: white;
+transform: translate(-24px,42%);
+padding-left:2px;
+padding-top:3px;
+font-weight:bold;
+}
+
+.bursttext {
+position: fixed;
+font-size: 0.6em;
+color: white;
+transform: rotate(-25deg) translate(-62px, -25%);
+padding-left:2px;
+padding-top:3px;
+font-weight:bold;
+}

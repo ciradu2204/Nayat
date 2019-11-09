@@ -1,0 +1,14 @@
+.otp fieldset, .otp input { 
+    border: none; 
+    float: left;
+    }
+   .otp input {
+   width: 40px;
+   padding: 5px; 
+   margin-right: 20px;
+   border: 1px solid lightgrey;
+   border-radius:15px;
+   background:lightgrey;
+   text-align: center;
+   font-size: 26px;
+}

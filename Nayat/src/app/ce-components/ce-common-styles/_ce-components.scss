@@ -1,0 +1,126 @@
+@import 'ce-mixins';
+@import 'ce-var';
+@import 'ce-mixins';
+@import 'ce-flex-box';
+@import 'padding-margin';
+@import './ce.typography';
+@import '../ce-card/ce-card.component.scss';
+@import '../ce-card-header/ce-card-header.component.scss';
+@import '../ce-card-footer/ce-card-footer.component.scss';
+@import '../ce-grid/ce-grid.component.scss';
+@import '../ce-row/ce-row.component.scss';
+@import '../ce-col/ce-col.component.scss';
+@import '../ce-vertical-stepper/ce-vertical-stepper.component.scss';
+@import '../ce-header/ce-header.component.scss';
+@import '../ce-donut-timer/ce-donut-timer.component.scss';
+@import '../ce-ribbon/ce-ribbon.component.scss';
+@import '../ce-label/ce-label.component.scss';
+@import '../ce-toggle-button/ce-toggle-button.component.scss';
+@import '../ce-button/ce-button.component.scss';
+@import '../ce-collapse/ce-collapse.component.scss';
+@import '../ce-list/ce-list.component.scss';
+@import '../ce-textarea/ce-textarea.component.scss';
+@import '../ce-radio-tab-button/ce-radio-tab-button.component.scss';
+@import '../ce-rating/ce-rating.component.scss';
+@import '../ce-sub-header/ce-sub-header.component.scss';
+@import '../ce-mood-select/ce-mood-select.component.scss';
+@import '../ce-dropdown-listbox/ce-dropdown-listbox.component.scss';
+@import '../ce-badge/ce-badge.component.scss';
+@import '../ce-checkbox/ce-checkbox.component.scss';
+@import '../ce-content/ce-content.component.scss';
+@import '../ce-footer/ce-footer.component.scss';
+@import '../ce-otptextbox/ce-otptextbox.component.scss';
+@import '../ce-percentage-donut/ce-percentage-donut.component.scss';
+@import '../ce-horizontal-stepper/ce-horizontal-stepper.component.scss';
+@import '../ce-modal/ce-modal.component.scss';
+@import '../ce-form-field/ce-form-field.component.scss';
+@import '../ce-inputs/ce-inputs.component.scss';
+
+.radio-field {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    color: theme-color('medium');
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+    }
+  }
+  .radio-field{
+    padding-left: 27px;
+  }
+  
+  /* Hide the browser's default radio button */
+  
+  /* Create a custom radio button */
+  
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: #ffffff;
+    border:1px solid  #989aa2;
+    border-radius: 50%;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  
+  .radio-field {
+    &:hover input ~ .checkmark {
+      background-color: #ccc;
+    }
+    input:checked ~ .checkmark {
+      background-color: #1DD1A1;
+      border:none;
+    }
+  }
+  
+  /* When the radio button is checked, add a blue background */
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  .radio-field{
+    input{
+      display: none;
+    }
+  }
+  /* Show the indicator (dot/circle) when checked */
+  
+  .radio-field {
+    input:checked ~ .checkmark:after {
+      display: block;
+    }
+    .checkmark:after {
+        font-family: 'Material Icons';
+        content: '\e876';
+        top: 0px;
+        left: 1px;
+        width: 2px;
+        height: 2px;
+        border-radius: 50%;
+        color: white;
+        font-size: 15px;
+    }
+  }
+  .form-groups{
+      height:98vh;
+      overflow: auto;
+  }
+
+
+
+

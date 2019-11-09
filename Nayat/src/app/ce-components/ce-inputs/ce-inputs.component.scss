@@ -1,0 +1,37 @@
+@mixin ce-input-theme {
+    .ce-native-select .ce-form-field-infix::after{
+        color:theme-color("dark");
+    }
+    .ce-input:disabled,
+    .ce-native-select.ce-form-field-disabled .ce-form-field-infix::after{
+        color:theme-color("light");
+    }
+    .ce-input{
+        caret-color: theme-color("dark");
+        &::placeholder{
+            color:rgba(0,0,0,.42);
+        }
+        &::-moz-placeholder{
+            color:rgba(0,0,0,.42);
+        }
+        &::-webkit-input-placeholder{
+            color:rgba(172, 136, 136, 0.42);
+        }
+        &:-ms-input-placeholder{
+            color:rgba(0,0,0,.42);
+        }
+    }
+    .ce-accent .ce-input{
+        caret-color: #ff4081;
+    }
+    .ce-warn .ce-input
+    .ce-form-field-invalid .ce-input{
+        caret-color: theme-color('danger');
+    }
+    .ce-native-select .ce-form-field-invalid .ce-form-field-infix::after{
+        color:theme-color('danger');
+    }
+}
+@mixin ce-input-typoghraphy {
+    margin: -.0625em;
+}

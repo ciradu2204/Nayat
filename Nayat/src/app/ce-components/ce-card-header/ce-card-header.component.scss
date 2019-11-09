@@ -1,0 +1,33 @@
+.ce-card-header{
+    display: flex;
+    flex-direction: row;
+    .ce-card-title{
+        margin-bottom: 12px;
+    }
+}
+.ce-card-header-text{
+    margin: 0 $ce-card-padding;
+}
+
+%ce-card-section-base{
+    display: block;
+    margin-bottom: 16px;
+}
+
+.ce-card-title{
+    display: block;
+    margin-bottom: 8px;
+}
+
+.ce-card-title, .ce-card-content{
+    @extend %ce-card-section-base; 
+}
+.ce-card-title:not(:first-child), .ce-card-subtitle:not(:first-child) {
+    margin-top: -4px;
+}
+.ce-card-header .ce-card-title:not(:first-child){
+    margin-top: -4px;
+}
+.ce-card-header .ce-card-subtitle:not(:first-child){
+    margin-top: -8px;
+}

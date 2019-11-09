@@ -1,0 +1,9 @@
+.ce-card-footer{
+    $margin: -$ce-card-padding;
+    display: block;
+    margin: $margin $margin $margin;
+}
+.ce-card> :last-child:not(.mat-card-footer),
+.ce-card-content> :last-child:not(.mat-card-footer){
+    margin-bottom: 0;
+}

@@ -1,0 +1,111 @@
+<!-- top-header -->
+
+<body>
+  <div class="fullPage">
+    <ce-grid>
+        <ce-row>
+          <ce-col colSize='6' colSizeSm='6' colSizelg='6' colSizeXl='6'>
+            <i class="fas fa-arrow-left"></i>
+          </ce-col>
+          <ce-col colSize='6' colSizeSm='6' colSizelg='6' colSizeXl='6'>
+            <i class="fas fa-bars"></i>
+          </ce-col>
+        </ce-row>
+    
+        <ce-row class="text-align-center mt-2">
+          <ce-col colSize="12" colSizeSm="12" colSizeMd="12" colSizelg="12" colSizeXl="12"> <img id="logo"
+              src="../../../assets/nayat-logo-fi.png" alt="image here">
+          </ce-col>
+        </ce-row>
+      </ce-grid>
+
+
+  <!--assign to worker 1-->
+  <div class="card">
+  <ce-card>
+      <ce-grid>
+            <ce-row class="text-align-center ">
+              <ce-col colSize="12" colSizeSm="12" colSizeMd="12" colSizelg="12" colSizeXl="12"> 
+                <ce-label id='label1'>ALERT</ce-label>
+              </ce-col>
+            </ce-row>
+        
+          <hr class="hr">
+        </ce-grid>
+
+        <ce-grid>      
+                <ce-label id='label2'>Incident ID: {{id}}</ce-label>
+        </ce-grid>
+
+              <ce-grid>
+                  <ce-row>
+                    <ce-col colSize='2' colSizeSm='2' colSizeMd='2' colSizeLg='2' colSizeXl='2'>
+                      <i class="fa fa-user-circle-o fa-1x profileIcon" aria-hidden="true"></i>
+                    </ce-col>
+                  
+                    <ce-col id='information' colSize='9' colSizeSm='9' colSizeMd='9' colSizeLg='9' colSizeXl='9'>
+                      <ce-row>
+                        <ce-label id='label3'>{{name}} (Age {{age}})</ce-label>
+                      </ce-row> 
+                      <ce-row>
+                        <ce-label id='label4'>{{address}}</ce-label>
+                      </ce-row>
+
+                    </ce-col>
+
+                    <ce-col colSize='1'colSizeSm='1' colSizeMd='1' colSizeLg='1' colSizeXl='1' >
+                       <ce-label><i class="fas fa-map-marker-alt"></i></ce-label>
+                    </ce-col>
+                  </ce-row>
+              </ce-grid>
+
+              <ce-grid>
+                <ce-row>
+                  <ce-col colSize="12" colSizeSm="12" colSizeMd="12" colSizelg="12" colSizeXl="12">
+                    <ce-row>
+                      <ce-label id='label5'>SOS Message:</ce-label>
+                    </ce-row>
+                    <ce-row>
+                      <ce-label id='label6'>Help me... </ce-label>
+                    </ce-row>
+                  </ce-col>
+                </ce-row>
+              </ce-grid>
+
+              <ce-grid>
+                <div id='icons'>
+                <ce-row>
+                  <ce-col colSize="3" colSizeSm="3" colSizeMd="3" colSizelg="3" colSizeXl="3">
+                    <i class="fas fa-comment"></i> 
+                  </ce-col>
+
+                  <ce-col  colSize="3" colSizeSm="3" colSizeMd="3" colSizelg="3" colSizeXl="3">
+                    <i class="fas fa-phone fa-rotate-90"></i>
+                  </ce-col>
+                  
+                  <ce-col  colSize="6" colSizeSm="6" colSizeMd="6" colSizelg="6" colSizeXl="6">
+                    <button ce-button id="assignToButton">Assign To</button>  
+                  </ce-col>
+                </ce-row>
+              </div>
+            </ce-grid> 
+  </ce-card>
+ </div>    
+
+ <!-- footer section -->
+ <ce-grid>
+    <div class="Footer">
+      <ce-row class="text-align-center mt-2">
+        <ce-col colSize="12" colSizeSm="12" colSizeMd="12" colSizelg="12" colSizeXl="12">
+          <ce-row>
+            <label id="footerLabel">POWERED BY </label>
+          </ce-row>
+          <ce-row>
+            <img src="../../../assets/CircleEdges EPS (2).png" class="footerImage">
+          </ce-row>
+        </ce-col>
+      </ce-row>
+    </div>
+  </ce-grid>
+</div>
+</body>

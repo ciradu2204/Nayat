@@ -1,0 +1,106 @@
+.btn{
+    display: inline-block;
+    font-family: $btn-font-family;
+    font-weight: $btn-font-weight;
+    color: $body-color;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    background-color: transparent;
+    border:$btn-border-width solid transparent;
+    @include ce-button-size($btn-padding-y,$btn-padding-x,$btn-font-size,$btn-line-height,$btn-border-radius);
+    @include  ce-transition;
+    @include hover{
+        color:$body-color;  
+        text-decoration: none;
+    }
+    &:focus,
+    &.focus{
+        outline: 0;
+        box-shadow: $btn-focus-box-shadow;
+    }
+    &:disabled,
+    &.disabled{
+        opacity: $btn-disabled-opacity;
+        @include box-shadow(none);
+    }
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active{
+        @include box-shadow($btn-active-box-shadow);
+        &:focus{
+            @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
+        }
+    }
+}
+
+a.btn.disabled,
+fieldset:disabled a.btn{
+    pointer-events: none;
+}
+//button-color
+@each $color, $value in $theme-colors{
+    .btn-#{$color}{
+        @include button-variant($value,$value);
+    }
+}
+//button-outline
+@each $color, $value in $theme-colors{
+    .btn-outline-#{$color}{
+        @include button-outline-varient($value);
+    }
+}
+//link button
+.btn-link{
+    font-weight:$font-weight-normal;
+    color: $link-color;
+    text-decoration: $link-decoration;
+    @include hover{
+        color: $link-hover-color;
+    }
+    &:focus,
+    &.focus{
+        text-decoration: $link-hover-decoration;
+        box-shadow: none;
+    }
+    &:disabled,
+    &.disabled{
+        color: $btn-link-disabled-color;
+        pointer-events: none;
+    }
+}
+
+//button large
+.btn-lg{
+    @include ce-button-size($btn-padding-y-lg,$btn-padding-x-lg,$btn-font-size-lg,$btn-line-height-lg,$btn-border-radius-lg);
+}
+
+//button-sm
+.btn-sm{
+    @include ce-button-size($btn-padding-y-sm,$btn-padding-x-sm,$btn-font-size-sm,$btn-line-height-sm,$btn-border-radius-sm);
+}
+
+//block button
+.btn-block{
+    display: block;
+    width: 100%;
+}
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"]{
+    .btn-block{
+        width:100%;
+    }
+}
+//fab-buttton
+.btn-fab{
+    @include ce-fab($ce-fab-size,$ce-fab-padding);
+}
+//mini fab-button
+.btn-mini-fab{
+    @include ce-fab($ce-mini-fab-size,$ce-mini-fab-padding)
+}
+.btn-rounded{
+    border-radius: 15px;
+}

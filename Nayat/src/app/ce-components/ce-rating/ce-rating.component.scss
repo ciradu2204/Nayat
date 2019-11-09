@@ -1,0 +1,41 @@
+.rating { 
+  border: none !important;
+  // float: left !important;
+}
+
+.rating > input { display: none !important; } 
+.rating > label:before {         
+  margin: 2px !important;
+  // font-size: 2em !important;
+  font-family: 'Material Icons' !important;
+  display: block !important;
+  cursor: pointer !important;
+  content: '\e83a' !important;
+}
+
+
+.rating > label { 
+  color: #ddd !important; 
+  float: right !important; 
+  position: relative;
+  margin-left:-6px;
+}
+.rating > input:checked ~ label  { color: #FFD700 !important;
+  margin-left:-6px;
+ } /* show gold star when clicked */
+.rating > input:checked ~ label:before  { 
+  color: #FFD700 !important;
+  margin-left:-6px;
+  margin: 2px !important;
+  // font-size: 2em !important;
+  font-family: 'Material Icons' !important;
+  display: block !important;
+  cursor: pointer !important;
+  content: '\e838' !important;
+} 
+.rating:not(:checked) > label:hover, /* hover current star */
+.rating:not(:checked) > label:hover ~ label {
+   color: #FFD700 !important;
+   margin-left:-6px;  
+  } 
+  

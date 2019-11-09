@@ -1,0 +1,171 @@
+body{
+    position: relative;
+    
+    }
+ 
+    .fa-bars{
+    position: absolute;
+    right: 0;
+    top:0;
+    
+    }
+    #center1{
+        color:#143D59;
+        font-size: bold;
+        padding:15px;
+        text-align: center;
+        width: 92%; 
+
+    }
+    #one{
+        color:#143D59;
+   
+    }
+    
+    .logo{
+    margin-top: 40px;
+    }
+    
+        
+   .fa-user{
+       font-size: 20px;  
+       background-color: white;
+       border-color:#143D59;
+       border-style: solid;
+       border-width: 4px;
+       border-radius: 100%;
+       padding: 6px;
+       color:#143D59;
+    }
+    #information{
+        margin-left:50px; 
+        margin-top: -40px;
+       
+    }
+    .fa-map-marker-alt{
+        color: #143D59;
+        margin-left: 165px;
+    }
+ 
+    #send{
+        background-color:#F4B41A;
+        border-radius: 14px;
+        padding:15px;
+        color:#143D59;
+        text-align: center;
+        width: 100%; 
+        margin-bottom: 14px;
+
+    }
+    #naya{
+    width: 100px;
+    margin-bottom: 40px;
+    height: 100px;
+    }
+
+    .footerImage{
+        height: 50px;
+        width: 50px; 
+        object-fit: contain;
+    }
+    .Footer{
+        display: flex;
+        justify-content: center;
+         margin-top: 300px;
+     
+    }
+    
+    #footerLabel{
+        font-size: 7px;
+    }
+    
+  
+    ce-card{
+        border-radius: 14px;
+        padding: 0px;
+        margin: 10px;
+        box-shadow:0px 0px 5px 0px gainsboro;
+    }
+    
+    .title{
+    display: flex;
+    justify-content: center;
+    }
+
+    .all{
+        margin-left:10px;
+        margin-right: 10px;
+    }
+ 
+    #im{
+        top:0px;
+    }
+    #input{
+    border-radius: 14px;
+  }
+  .input1{
+      margin-left: 10px;
+      margin-right: 10px;
+  }
+  .input2{
+    margin-left: 15px;
+    margin-right: 15px;
+    position: relative;
+
+  }
+
+  hr { 
+    font-size: 0.0px;
+    color: whitesmoke;
+    box-shadow: -0.2px -0.2px -0.2px -0.2px;
+    margin-top: 5px;
+}
+  input[type="text"] { 
+  box-sizing: border-box;
+  width: 100%; 
+  height: calc(3em + 2px); 
+  margin: 0 0 1em;  
+  padding: 6px;  
+  border: 1px solid #bababa;
+  border-radius: 3px; 
+  background: #fff;
+  resize: none;  
+   outline: none;
+  }
+  input[type="text"]:focus {
+  border-color:  #143D59;
+}
+input[type="text"]:focus + label[placeholder]:before {
+ color:  #143D59;
+  }
+input[type="text"]:focus + label[placeholder]:before,
+input[type="text"]:valid + label[placeholder]:before 
+                      {  
+transition-duration: .2s;  transform: translate(0, -1.6em) scale(0.9, 0.9);     
+ font-weight: bold;}input[type="text"]:valid {  
+border-color:  #143D59;}input[type="text"]:valid + label[placeholder]:before
+                              {    color:  #143D59;
+                    }
+input[type="text"]:invalid + label[placeholder][alt]:before 
+                              {  
+content: attr(alt);}input[type="text"] + label[placeholder] {  display: block;     
+  pointer-events: none;  line-height: 1.25em;  margin-top: calc(-3em - 2px); 
+   margin-bottom: calc((3em - 1em) + 2px);}input[type="text"] + label[placeholder]:before
+    {  content: attr(placeholder);  display: inline-block;
+        margin: 0 calc(0.5em + 2px); 
+       padding: 0 2px;  
+       color: #7d7d7d;  
+       white-space: nowrap;  
+       transition: 0.3s ease-in-out; 
+       background-image: linear-gradient(to bottom, #ffffff, #ffffff); 
+       background-size: 100% 5px;  
+       background-repeat: no-repeat;  
+       background-position: center;
+      }
+      @media screen and (max-width: 322px) {
+        .fa-map-marker-alt{
+            color: #143D59;
+            margin-left: 100px;
+        }
+    
+      }
